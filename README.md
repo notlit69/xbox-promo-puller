@@ -1,5 +1,4 @@
-# How to use?
-
+# Formats
 Accs format : email|pass or email:pass\
 Proxies format : user:pass@host:port or host:port 
 
