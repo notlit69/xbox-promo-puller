@@ -124,8 +124,13 @@ class DeviceToken:
         return response.json()['Token']
 
 def main(ms_creds : str):
-    email = ms_creds.split('|')[0]
-    pswd = ms_creds.split('|')[1]
+    if "|" in ms_creds:
+        email = ms_creds.split('|')[0]
+        pswd = ms_creds.split('|')[1]
+    else:
+        email = ms_creds.split(':')[0]
+        pswd = ms_creds.split(':')[1]
+    
     s = requests.session()
     try:
          proxies = {'https':'http://'+random.choice(open('proxies.txt').read().splitlines())}
