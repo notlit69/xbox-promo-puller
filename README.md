@@ -1,1 +1,3 @@
-# xbox-promo-puller
+# How to use?
+
+USE
